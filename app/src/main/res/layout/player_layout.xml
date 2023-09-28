@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#252424"
+        android:padding="5dp"
+        >
+
+        <VideoView
+            android:id="@+id/videoView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/roboto_slab"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:textSize="23sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/videoView"
+            tools:text="title of the video"
+            />
+
+        <TextView
+            android:id="@+id/likes_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:padding="3dp"
+            android:textColor="#7E7C7C"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/duration_text_view"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="@+id/title_text_view"
+            app:layout_constraintTop_toBottomOf="@+id/title_text_view"
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="2.6k views" />
+
+        <TextView
+            android:id="@+id/duration_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:padding="3dp"
+            android:textColor="#7E7C7C"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/uploaded_btn_text_view"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintTop_toBottomOf="@+id/title_text_view"
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="30 min ago" />
+
+        <TextView
+            android:id="@+id/uploaded_btn_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/duration_text_view"
+            app:layout_constraintTop_toBottomOf="@+id/title_text_view"
+            app:layout_constraintVertical_bias="0.0"
+            android:text="...more" />
+
+        <ImageView
+            android:id="@+id/logo_image_view"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:contentDescription="@string/logo_image"
+            app:layout_constraintEnd_toEndOf="@+id/uploaded_btn_text_view"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/likes_text_view"
+            app:layout_constraintTop_toBottomOf="@+id/likes_text_view"
+            tools:src="@drawable/test_logo" />
+
+        <TextView
+            android:id="@+id/author_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginBottom="21dp"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/logo_image_view"
+            app:layout_constraintStart_toEndOf="@+id/logo_image_view"
+            app:layout_constraintTop_toTopOf="@+id/logo_image_view"
+            tools:text="Media master" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#7E7C7C"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/author_text_view"
+            tools:layout_editor_absoluteY="5dp"
+            tools:text="4.77 lakh"
+            android:layout_margin="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/author_text_view"/>
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+
